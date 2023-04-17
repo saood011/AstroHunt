@@ -17,6 +17,7 @@
 		9E991EC229EBA453004ED28A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC129EBA453004ED28A /* LoadingView.swift */; };
 		9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC329EBB3D4004ED28A /* DetailView.swift */; };
 		9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC529ED6252004ED28A /* CircleImage.swift */; };
+		9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC729EDC150004ED28A /* AstronautInfoText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9E991EC129EBA453004ED28A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9E991EC329EBB3D4004ED28A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9E991EC529ED6252004ED28A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		9E991EC729EDC150004ED28A /* AstronautInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautInfoText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9E991EB629E99668004ED28A /* AstronautRow.swift */,
 				9E991EC129EBA453004ED28A /* LoadingView.swift */,
 				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
+				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
 				9E991EC529ED6252004ED28A /* CircleImage.swift */,
 			);
 			path = Views;
@@ -186,6 +189,7 @@
 				9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */,
 				9E991EA729E99292004ED28A /* AstroHuntApp.swift in Sources */,
 				9E991EBA29E9971E004ED28A /* Astronaut.swift in Sources */,
+				9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */,
 				9E991EC229EBA453004ED28A /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

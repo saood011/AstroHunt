@@ -13,7 +13,6 @@ struct AstronautRow: View {
     
     var body: some View {
         HStack {
-          
             AsyncImage(url: URL(string: astronaut.profileImageThumbnail))
                 .clipShape(Rectangle()).frame(width: 100, height: 100)
                 .cornerRadius(18)

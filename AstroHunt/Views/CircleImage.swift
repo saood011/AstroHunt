@@ -33,5 +33,7 @@ struct CircleImage: View {
         .overlay {
             Circle().stroke(.white, lineWidth: 4)
         }.shadow(radius: 9)
+            .offset(y: -80).padding(.bottom, -130)
+
     }
 }
