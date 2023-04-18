@@ -18,7 +18,62 @@ class Network: ObservableObject {
     @Published var retryAfter: String = ""
     
     var astronautsUrl = "https://ll.thespacedevs.com/2.2.0/astronaut/"
+    
+    func downloadApiRespnose(){
+        self.isLoading = true
+        let requestUrl = URL(string: astronautsUrl)
+        let defaults = UserDefaults.standard
+        let fileName = "AtronautsList.json"
+        do {
+            //Retrieve the existing JSON file from documents directory
+            var fileUrl = defaults.url(forKey: fileName)
 
+            // if the file is not there, download the file from web and save it to the local directory on the device and return the url path
+            if fileUrl == nil {
+                let newfileUrl = downloadData(fileName: fileName, requestUrl: requestUrl!)
+                fileUrl = newfileUrl
+                print("Saved successfully")
+            }
+            // read data from the file
+                let fileData = try Data(contentsOf: fileUrl!, options: [])
+          
+            // set it to the astronauts array after decoding
+                DispatchQueue.main.async {
+                    do {
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let decodedUsers = try decoder.decode(ApiResponse.self, from: fileData)
+                        self.astronauts = decodedUsers.results
+                        self.isLoading = false
+                    } catch let error {
+                        print("Error decoding: ", error)
+                        self.error = true
+                        self.isLoading = false
+                    }
+                }
+        } catch {
+            print(error)
+        }
+    }
+    
+    func downloadData(fileName: String, requestUrl: URL) -> URL? {
+        print("File not found, creating a new file...")
+        let defaults = UserDefaults.standard
+        do{
+            let directory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileURL = directory.appendingPathComponent(fileName)
+            let jsonData = try Data(contentsOf: requestUrl)
+            try jsonData.write(to: fileURL, options: .atomic)
+            //Save the location of your JSON file to UserDefaults
+            defaults.set(fileURL, forKey: fileName)
+            print(fileURL)
+            return fileURL
+        }catch{
+            print(error)
+            return nil
+        }
+    }
+    
     func getAstronauts() {
         print("fetching data")
         self.isLoading = true

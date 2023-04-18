@@ -28,7 +28,7 @@ struct ContentView: View {
                     })
                 }
         .onAppear {
-            network.getAstronauts()
+            network.downloadApiRespnose()
         }
         if network.isLoading{
             LoadingView()
