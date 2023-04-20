@@ -18,6 +18,12 @@
 		9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC329EBB3D4004ED28A /* DetailView.swift */; };
 		9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC529ED6252004ED28A /* CircleImage.swift */; };
 		9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC729EDC150004ED28A /* AstronautInfoText.swift */; };
+		9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ECD29EF49FF004ED28A /* NukeUI */; };
+		9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */; };
+		9E991ED229EF5866004ED28A /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED129EF5866004ED28A /* FacebookLogin.swift */; };
+		9E991ED629F082AD004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ED529F082AD004ED28A /* FacebookLogin */; };
+		9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */; };
+		9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EDA29F094A8004ED28A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,12 @@
 		9E991EC329EBB3D4004ED28A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9E991EC529ED6252004ED28A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9E991EC729EDC150004ED28A /* AstronautInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautInfoText.swift; sourceTree = "<group>"; };
+		9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessedImage.swift; sourceTree = "<group>"; };
+		9E991ED129EF5866004ED28A /* FacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
+		9E991ED329EF5DB1004ED28A /* AstroHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroHunt.entitlements; sourceTree = "<group>"; };
+		9E991ED729F08533004ED28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
+		9E991EDA29F094A8004ED28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E991ED629F082AD004ED28A /* FacebookLogin in Frameworks */,
+				9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +79,8 @@
 		9E991EA529E99292004ED28A /* AstroHunt */ = {
 			isa = PBXGroup;
 			children = (
+				9E991ED729F08533004ED28A /* Info.plist */,
+				9E991ED329EF5DB1004ED28A /* AstroHunt.entitlements */,
 				9E991EBB29E99B8A004ED28A /* Utilities */,
 				9E991EA629E99292004ED28A /* AstroHuntApp.swift */,
 				9E991EBE29E9A08A004ED28A /* Views */,
@@ -95,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				9E991EBF29EA53C8004ED28A /* NetworkManager.swift */,
+				9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */,
+				9E991EDA29F094A8004ED28A /* AppDelegate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -106,8 +124,10 @@
 				9E991EB629E99668004ED28A /* AstronautRow.swift */,
 				9E991EC129EBA453004ED28A /* LoadingView.swift */,
 				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
+				9E991ED129EF5866004ED28A /* FacebookLogin.swift */,
 				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
 				9E991EC529ED6252004ED28A /* CircleImage.swift */,
+				9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +148,10 @@
 			dependencies = (
 			);
 			name = AstroHunt;
+			packageProductDependencies = (
+				9E991ECD29EF49FF004ED28A /* NukeUI */,
+				9E991ED529F082AD004ED28A /* FacebookLogin */,
+			);
 			productName = AstroHunt;
 			productReference = 9E991EA329E99292004ED28A /* AstroHunt.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +180,10 @@
 				Base,
 			);
 			mainGroup = 9E991E9A29E99292004ED28A;
+			packageReferences = (
+				9E991ECC29EF49FF004ED28A /* XCRemoteSwiftPackageReference "Nuke" */,
+				9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 9E991EA429E99292004ED28A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,12 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */,
 				9E991EA929E99292004ED28A /* ContentView.swift in Sources */,
 				9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */,
 				9E991EB729E99668004ED28A /* AstronautRow.swift in Sources */,
+				9E991ED229EF5866004ED28A /* FacebookLogin.swift in Sources */,
 				9E991EC029EA53C8004ED28A /* NetworkManager.swift in Sources */,
 				9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */,
 				9E991EA729E99292004ED28A /* AstroHuntApp.swift in Sources */,
+				9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */,
+				9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */,
 				9E991EBA29E9971E004ED28A /* Astronaut.swift in Sources */,
 				9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */,
 				9E991EC229EBA453004ED28A /* LoadingView.swift in Sources */,
@@ -316,11 +348,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AstroHunt/AstroHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AstroHunt/Preview Content\"";
+				DEVELOPMENT_TEAM = Z89THRG3RT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroHunt/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,11 +380,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AstroHunt/AstroHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AstroHunt/Preview Content\"";
+				DEVELOPMENT_TEAM = Z89THRG3RT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstroHunt/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -389,6 +429,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E991ECC29EF49FF004ED28A /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E991ECD29EF49FF004ED28A /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E991ECC29EF49FF004ED28A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		9E991ED529F082AD004ED28A /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E991E9B29E99292004ED28A /* Project object */;
 }

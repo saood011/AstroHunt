@@ -6,22 +6,17 @@
 //
 
 import SwiftUI
+import NukeUI
 
 struct AstronautRow: View {
     
     let astronaut : Astronaut
     
+ 
+    
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: astronaut.profileImageThumbnail))
-                .clipShape(Rectangle()).frame(width: 100, height: 100)
-                .cornerRadius(18)
-                .overlay {
-                    Rectangle().stroke(.white, lineWidth: 8)
-                }
-                .cornerRadius(8)
-                .shadow(radius: 7)
-                .frame(width: 120,height: 90).scaledToFit()
+            ProcessedImage(url: URL(string: astronaut.profileImageThumbnail)!)
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(astronaut.name)
@@ -32,6 +27,7 @@ struct AstronautRow: View {
                     .foregroundColor(.secondary)
                     .fontWeight(.semibold)
             }
+            Spacer()
         }
     }
 }
@@ -41,3 +37,4 @@ struct AstronautRow_Previews: PreviewProvider {
         AstronautRow(astronaut: MockData.sampleAstronaut).environmentObject(Network())
     }
 }
+

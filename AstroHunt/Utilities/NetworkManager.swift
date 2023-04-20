@@ -17,11 +17,11 @@ class Network: ObservableObject {
     
     @Published var retryAfter: String = ""
     
-    var astronautsUrl = "https://ll.thespacedevs.com/2.2.0/astronaut/"
+    var apiEndpoint = "https://ll.thespacedevs.com/2.2.0/astronaut/"
     
     func downloadApiRespnose(){
         self.isLoading = true
-        let requestUrl = URL(string: astronautsUrl)
+        let apiEndpointUrl = URL(string: apiEndpoint)
         let defaults = UserDefaults.standard
         let fileName = "AtronautsList.json"
         do {
@@ -30,27 +30,27 @@ class Network: ObservableObject {
 
             // if the file is not there, download the file from web and save it to the local directory on the device and return the url path
             if fileUrl == nil {
-                let newfileUrl = downloadData(fileName: fileName, requestUrl: requestUrl!)
+                let newfileUrl = downloadData(fileName: fileName, requestUrl: apiEndpointUrl!)
                 fileUrl = newfileUrl
                 print("Saved successfully")
             }
             // read data from the file
-                let fileData = try Data(contentsOf: fileUrl!, options: [])
+            let fileData = try Data(contentsOf: fileUrl!, options: [])
           
             // set it to the astronauts array after decoding
-                DispatchQueue.main.async {
-                    do {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let decodedUsers = try decoder.decode(ApiResponse.self, from: fileData)
-                        self.astronauts = decodedUsers.results
-                        self.isLoading = false
-                    } catch let error {
-                        print("Error decoding: ", error)
-                        self.error = true
-                        self.isLoading = false
-                    }
+            DispatchQueue.main.async {
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let decodedUsers = try decoder.decode(ApiResponse.self, from: fileData)
+                    self.astronauts = decodedUsers.results
+                    self.isLoading = false
+                } catch let error {
+                    print("Error decoding: ", error)
+                    self.error = true
+                    self.isLoading = false
                 }
+            }
         } catch {
             print(error)
         }
@@ -78,7 +78,7 @@ class Network: ObservableObject {
         print("fetching data")
         self.isLoading = true
 
-        guard let url = URL(string: astronautsUrl ) else { fatalError("Missing URL") }
+        guard let url = URL(string: apiEndpoint ) else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 
@@ -126,9 +126,9 @@ class Network: ObservableObject {
     
     func getAstronautDetails(id: String) {
         print("fetching flight data \(id)")
-        self.isLoading = true
+    //    self.isLoading = true
 
-        guard let url = URL(string: "\(astronautsUrl)\(id)/" ) else { fatalError("Missing URL") }
+        guard let url = URL(string: "\(apiEndpoint)\(id)/" ) else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 

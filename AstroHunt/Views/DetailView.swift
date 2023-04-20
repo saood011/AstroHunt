@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NukeUI
 
 struct DetailView: View {
     @EnvironmentObject var network: Network
@@ -44,16 +45,14 @@ struct ProfileImage: View {
     var astronaut: Astronaut
     
     var body: some View {
-        AsyncImage(url: URL(string: astronaut.profileImage)){
-            phase in
-            switch phase{
-            case .empty: ProgressView()
-            case .success(let image): image.resizable().frame(maxWidth: 400, maxHeight: 480).scaledToFit().shadow(radius: 10)
-            case .failure: Image(systemName: "wifi.slash")
-            @unknown default:
-                EmptyView()
+        LazyImage(url:  URL(string: astronaut.profileImage)) { state in
+            if let image = state.image {
+                image.resizable().aspectRatio(contentMode: .fit)
+            } else if state.error != nil {
+                Color.red // Indicates an error
+            } else {
+                ProgressView()
             }
-            
         }
         .frame(height: 500)
     }

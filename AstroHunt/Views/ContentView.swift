@@ -5,34 +5,69 @@
 //  Created by saood.akhtar on 14.04.23.
 //
 import SwiftUI
+import NukeUI
 
 struct ContentView: View {
+    
     @EnvironmentObject var network: Network
+    
+    @StateObject var loginManager = FacebookLoginManager()
 
     var body: some View {
-        
-        NavigationView {
-        
-            List(network.astronauts) { astronaut in
-                        NavigationLink {
-                            DetailView(astronaut: astronaut)
-                        } label: {
-                            AstronautRow(astronaut: astronaut)
+     
+        ZStack{
+            if !loginManager.isLoggedIn{
+
+                CoverView()
+            }else{
+
+                NavigationView {
+                    List(network.astronauts) { astronaut in
+                                NavigationLink {
+                                    DetailView(astronaut: astronaut)
+                                } label: {
+                                    AstronautRow(astronaut: astronaut)
+                                }
+                    }
+                    .navigationTitle("All Astronauts")
+                    .toolbar{
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            HStack{
+                                LazyImage(url:  URL(string: loginManager.dpUrl)) { state in
+                                    if let image = state.image {
+                                        image.resizable().aspectRatio(contentMode: .fill)
+                                    } else if state.error != nil {
+                                        Color.red // Indicates an error
+                                    } else {
+                                        Color.blue // Acts as a placeholder
+                                    }
+                                }
+                                .clipShape(Circle()).frame(width: 40, height: 40)
+                                .overlay {
+                                    Circle().stroke(.white, lineWidth: 2)
+                                }
+                                .cornerRadius(8)
+                                .shadow(radius: 2)
+                                .frame(width: 40,height: 90).scaledToFit()
+                                Button("Logout", action: {
+                                    loginManager.logoutUser()
+                                })
+                            }
+                           
                         }
-            }
-            .navigationTitle("All Astronauts")
-                    .listStyle(.grouped)
-                    .alert(isPresented: $network.error
-                           , content: {
-                        Alert(title: Text("Error Occured"), message: Text("too many requests, try after \(network.retryAfter) seconds"), dismissButton: .default(Text("Got it!")))
-                    })
+                    }
+                    .listStyle(.inset)
+                            .alert(isPresented: $network.error
+                                   , content: {
+                                Alert(title: Text("Error Occured"), message: Text("too many requests, try after \(network.retryAfter) seconds"), dismissButton: .default(Text("Got it!")))
+                            })
+                        }
+                .onAppear {
+                    network.downloadApiRespnose()
                 }
-        .onAppear {
-            network.downloadApiRespnose()
+            }
         }
-        if network.isLoading{
-            LoadingView()
-        }
+
       
     }
 }
@@ -44,28 +79,5 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct AstronautRow2: View {
-    
-    let astronaut: Astronaut
-    
-    var body: some View {
-        HStack(alignment:.top) {
-            AsyncImage(url: URL(string: astronaut.profileImageThumbnail))
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 90)
-                .cornerRadius(8)
-            VStack(alignment: .leading) {
-                Spacer()
-                Text(astronaut.name).bold()
-                Text("Age: \(String(astronaut.age))")
-                Spacer()
-            }
-        }
-        .frame(width: 330, alignment: .leading)
-        .padding()
-        .background(Color(#colorLiteral(red: 0.6667672396, green: 0.7527905703, blue: 1, alpha: 0.2662717301)))
-        .cornerRadius(20)
-    }
-}
 
 

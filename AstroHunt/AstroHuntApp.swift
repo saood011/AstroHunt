@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct AstroHuntApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(Network())
