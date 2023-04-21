@@ -21,6 +21,7 @@ struct DetailView: View {
             CircleImage(astronaut: astronaut)
             
             AstronautInfoText(astronaut: astronaut)
+            
             Spacer()
         }
         .navigationTitle(astronaut.name)
@@ -43,11 +44,13 @@ struct DetailView_Previews: PreviewProvider {
 
 struct ProfileImage: View {
     var astronaut: Astronaut
+    @StateObject var loginManager = FacebookLoginManager()
     
     var body: some View {
         LazyImage(url:  URL(string: astronaut.profileImage)) { state in
             if let image = state.image {
                 image.resizable().aspectRatio(contentMode: .fit)
+         
             } else if state.error != nil {
                 Color.red // Indicates an error
             } else {
@@ -55,6 +58,12 @@ struct ProfileImage: View {
             }
         }
         .frame(height: 500)
+
+        Button {
+            loginManager.shareImageViaFacebook(url: URL(string: astronaut.profileImageThumbnail)!)
+        } label: {
+            Label("Share", systemImage: "square.and.arrow.up")
+        }.zIndex(2).padding(.leading, 300)
     }
 }
 

@@ -8,10 +8,16 @@
 import Foundation
 import SwiftUI
 import FacebookLogin
+import FBSDKShareKit
 
+class FacebookLoginManager: ObservableObject, SharingDelegate{
 
-class FacebookLoginManager: ObservableObject {
-
+    func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
+    }
+    func sharer(_ sharer: Sharing, didFailWithError error: Error) {
+    }
+    func sharerDidCancel(_ sharer: Sharing) {
+    }
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @AppStorage("email") var email = ""
     @AppStorage("dpUrl") var dpUrl = ""
@@ -64,5 +70,26 @@ class FacebookLoginManager: ObservableObject {
         self.isLoggedIn = false
         
         }
+    func shareImageViaFacebook(url:URL) {
+        let data = try? Data(contentsOf: url)
+        var image = UIImage(data: data!)
 
+        let photo = SharePhoto(image: image!, isUserGenerated: true)
+        let content = SharePhotoContent()
+        content.photos = [photo]
+        content.hashtag = Hashtag("#AstroHunt")
+        let dialog = ShareDialog(
+            viewController: nil,
+            content: content,
+            delegate: self
+        )
+        // Recommended to validate before trying to display the dialog
+        do {
+            try dialog.validate()
+        } catch {
+            print(error)
+        }
+        
+        dialog.show()
+    }
 }

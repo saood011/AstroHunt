@@ -21,9 +21,11 @@
 		9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ECD29EF49FF004ED28A /* NukeUI */; };
 		9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */; };
 		9E991ED229EF5866004ED28A /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED129EF5866004ED28A /* FacebookLogin.swift */; };
-		9E991ED629F082AD004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ED529F082AD004ED28A /* FacebookLogin */; };
 		9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */; };
 		9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EDA29F094A8004ED28A /* AppDelegate.swift */; };
+		9E991EDE29F13197004ED28A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDD29F13197004ED28A /* FacebookCore */; };
+		9E991EE029F13197004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDF29F13197004ED28A /* FacebookLogin */; };
+		9E991EE229F13197004ED28A /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EE129F13197004ED28A /* FacebookShare */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E991ED629F082AD004ED28A /* FacebookLogin in Frameworks */,
 				9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */,
+				9E991EDE29F13197004ED28A /* FacebookCore in Frameworks */,
+				9E991EE229F13197004ED28A /* FacebookShare in Frameworks */,
+				9E991EE029F13197004ED28A /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +154,9 @@
 			name = AstroHunt;
 			packageProductDependencies = (
 				9E991ECD29EF49FF004ED28A /* NukeUI */,
-				9E991ED529F082AD004ED28A /* FacebookLogin */,
+				9E991EDD29F13197004ED28A /* FacebookCore */,
+				9E991EDF29F13197004ED28A /* FacebookLogin */,
+				9E991EE129F13197004ED28A /* FacebookShare */,
 			);
 			productName = AstroHunt;
 			productReference = 9E991EA329E99292004ED28A /* AstroHunt.app */;
@@ -182,7 +188,7 @@
 			mainGroup = 9E991E9A29E99292004ED28A;
 			packageReferences = (
 				9E991ECC29EF49FF004ED28A /* XCRemoteSwiftPackageReference "Nuke" */,
-				9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				9E991EDC29F13197004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 9E991EA429E99292004ED28A /* Products */;
 			projectDirPath = "";
@@ -439,7 +445,7 @@
 				minimumVersion = 12.0.0;
 			};
 		};
-		9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+		9E991EDC29F13197004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
 			requirement = {
@@ -455,10 +461,20 @@
 			package = 9E991ECC29EF49FF004ED28A /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
 		};
-		9E991ED529F082AD004ED28A /* FacebookLogin */ = {
+		9E991EDD29F13197004ED28A /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9E991ED429F082AD004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 9E991EDC29F13197004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		9E991EDF29F13197004ED28A /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E991EDC29F13197004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		9E991EE129F13197004ED28A /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E991EDC29F13197004ED28A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
