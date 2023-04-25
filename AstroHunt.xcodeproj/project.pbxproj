@@ -26,6 +26,8 @@
 		9E991EDE29F13197004ED28A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDD29F13197004ED28A /* FacebookCore */; };
 		9E991EE029F13197004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDF29F13197004ED28A /* FacebookLogin */; };
 		9E991EE229F13197004ED28A /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EE129F13197004ED28A /* FacebookShare */; };
+		9EDB97BE29F7B130001DBBB0 /* AstronautList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB97BD29F7B130001DBBB0 /* AstronautList.swift */; };
+		9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		9E991ED729F08533004ED28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
 		9E991EDA29F094A8004ED28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EDB97BD29F7B130001DBBB0 /* AstronautList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautList.swift; sourceTree = "<group>"; };
+		9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInProfileImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				9E991EA829E99292004ED28A /* ContentView.swift */,
+				9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */,
+				9EDB97BD29F7B130001DBBB0 /* AstronautList.swift */,
 				9E991EB629E99668004ED28A /* AstronautRow.swift */,
 				9E991EC129EBA453004ED28A /* LoadingView.swift */,
 				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
@@ -225,6 +231,8 @@
 				9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */,
 				9E991EA729E99292004ED28A /* AstroHuntApp.swift in Sources */,
 				9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */,
+				9EDB97BE29F7B130001DBBB0 /* AstronautList.swift in Sources */,
+				9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */,
 				9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */,
 				9E991EBA29E9971E004ED28A /* Astronaut.swift in Sources */,
 				9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */,

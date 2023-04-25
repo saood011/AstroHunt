@@ -17,18 +17,14 @@ struct CoverView: View {
     var body: some View {
         
         ZStack{
-
             if loginManager.isLoggedIn{
                 ContentView()
                 
             }else{
                 ZStack{
-                    
                     Image("astro").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea(.all)
-                    VStack{
+                    Text("Welcome to AstroHunt").font(.title).padding(.all).background(.black.opacity(0.5)).foregroundColor(.white).cornerRadius(10)
 
-                        Text("Welcome to AstroHunt").font(.title).padding(.all).padding(.top, 20)
-                        Spacer()
                         Button(action: {
                             if loginManager.isLoggedIn{
                                 loginManager.logoutUser()
@@ -42,16 +38,12 @@ struct CoverView: View {
                                 .foregroundColor(.white)
                                 .padding()
                                 .background(Color.blue)
-                        }).padding(.bottom, 30)
-                    }.foregroundColor(.white).frame(height: 200).background(.black.opacity(0.5)).cornerRadius(10).padding(.top, 500)
-           
+                        }).padding()
+                    .foregroundColor(.white).frame(height: 40).background(.white.opacity(0.5)).cornerRadius(10).padding(.top, 500)
                 }
             }
         }.transition(.slide)
             .animation(.easeInOut)
-        
-            
-        
     }
 }
 
@@ -59,7 +51,6 @@ struct CoverView: View {
 struct CoverView_Previews: PreviewProvider {
     static var previews: some View {
         CoverView()
-          
     }
 }
 

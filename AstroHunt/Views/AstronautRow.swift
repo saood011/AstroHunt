@@ -12,8 +12,6 @@ struct AstronautRow: View {
     
     let astronaut : Astronaut
     
- 
-    
     var body: some View {
         HStack {
             ProcessedImage(url: URL(string: astronaut.profileImageThumbnail)!)

@@ -72,7 +72,7 @@ class FacebookLoginManager: ObservableObject, SharingDelegate{
         }
     func shareImageViaFacebook(url:URL) {
         let data = try? Data(contentsOf: url)
-        var image = UIImage(data: data!)
+        let image = UIImage(data: data!)
 
         let photo = SharePhoto(image: image!, isUserGenerated: true)
         let content = SharePhotoContent()
