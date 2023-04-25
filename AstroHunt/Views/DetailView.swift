@@ -44,7 +44,7 @@ struct DetailView_Previews: PreviewProvider {
 
 struct ProfileImage: View {
     var astronaut: Astronaut
-    @StateObject var loginManager = FacebookLoginManager()
+    @StateObject var loginManager = AppLoginManager()
     
     var body: some View {
         LazyImage(url:  URL(string: astronaut.profileImage)) { state in

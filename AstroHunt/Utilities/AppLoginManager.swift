@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 import FacebookLogin
 import FBSDKShareKit
+import LocalAuthentication
 
-class FacebookLoginManager: ObservableObject, SharingDelegate{
+
+class AppLoginManager: ObservableObject, SharingDelegate{
 
     func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
     }
@@ -91,5 +93,33 @@ class FacebookLoginManager: ObservableObject, SharingDelegate{
         }
         
         dialog.show()
+    }
+    
+    func FaceIdLogin() {
+        let context = LAContext()
+        var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "We need to unlock your data."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                if success {
+                    // authenticated successfully
+                    DispatchQueue.main.async {
+                        self.isLoggedIn = true
+                        print("login successful")
+                    }
+                } else {
+                    // there was a problem
+                    print(authenticationError!)
+                }
+            }
+        } else {
+            // no biometrics
+            print("no biometrics available")
+        }
     }
 }

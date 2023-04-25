@@ -9,7 +9,7 @@ import SwiftUI
 import NukeUI
 
 struct LoggedInProfileImage: View {
-    @StateObject var loginManager = FacebookLoginManager()
+    @StateObject var loginManager = AppLoginManager()
 
     var body: some View {
         HStack{
@@ -19,7 +19,7 @@ struct LoggedInProfileImage: View {
                 } else if state.error != nil {
                     Color.red // Indicates an error
                 } else {
-                    Color.blue // Acts as a placeholder
+                    LoadingView()
                 }
             }
             .clipShape(Circle()).frame(width: 40, height: 40)

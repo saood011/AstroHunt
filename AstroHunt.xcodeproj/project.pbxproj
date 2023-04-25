@@ -20,8 +20,8 @@
 		9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC729EDC150004ED28A /* AstronautInfoText.swift */; };
 		9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ECD29EF49FF004ED28A /* NukeUI */; };
 		9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */; };
-		9E991ED229EF5866004ED28A /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED129EF5866004ED28A /* FacebookLogin.swift */; };
-		9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */; };
+		9E991ED229EF5866004ED28A /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED129EF5866004ED28A /* CoverView.swift */; };
+		9E991ED929F08EC4004ED28A /* AppLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED829F08EC4004ED28A /* AppLoginManager.swift */; };
 		9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EDA29F094A8004ED28A /* AppDelegate.swift */; };
 		9E991EDE29F13197004ED28A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDD29F13197004ED28A /* FacebookCore */; };
 		9E991EE029F13197004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDF29F13197004ED28A /* FacebookLogin */; };
@@ -44,10 +44,10 @@
 		9E991EC529ED6252004ED28A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9E991EC729EDC150004ED28A /* AstronautInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautInfoText.swift; sourceTree = "<group>"; };
 		9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessedImage.swift; sourceTree = "<group>"; };
-		9E991ED129EF5866004ED28A /* FacebookLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
+		9E991ED129EF5866004ED28A /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		9E991ED329EF5DB1004ED28A /* AstroHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroHunt.entitlements; sourceTree = "<group>"; };
 		9E991ED729F08533004ED28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
+		9E991ED829F08EC4004ED28A /* AppLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginManager.swift; sourceTree = "<group>"; };
 		9E991EDA29F094A8004ED28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EDB97BD29F7B130001DBBB0 /* AstronautList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautList.swift; sourceTree = "<group>"; };
 		9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInProfileImage.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				9E991EBF29EA53C8004ED28A /* NetworkManager.swift */,
-				9E991ED829F08EC4004ED28A /* FacebookLoginManager.swift */,
+				9E991ED829F08EC4004ED28A /* AppLoginManager.swift */,
 				9E991EDA29F094A8004ED28A /* AppDelegate.swift */,
 			);
 			path = Utilities;
@@ -134,7 +134,7 @@
 				9E991EB629E99668004ED28A /* AstronautRow.swift */,
 				9E991EC129EBA453004ED28A /* LoadingView.swift */,
 				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
-				9E991ED129EF5866004ED28A /* FacebookLogin.swift */,
+				9E991ED129EF5866004ED28A /* CoverView.swift */,
 				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
 				9E991EC529ED6252004ED28A /* CircleImage.swift */,
 				9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */,
@@ -226,14 +226,14 @@
 				9E991EA929E99292004ED28A /* ContentView.swift in Sources */,
 				9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */,
 				9E991EB729E99668004ED28A /* AstronautRow.swift in Sources */,
-				9E991ED229EF5866004ED28A /* FacebookLogin.swift in Sources */,
+				9E991ED229EF5866004ED28A /* CoverView.swift in Sources */,
 				9E991EC029EA53C8004ED28A /* NetworkManager.swift in Sources */,
 				9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */,
 				9E991EA729E99292004ED28A /* AstroHuntApp.swift in Sources */,
 				9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */,
 				9EDB97BE29F7B130001DBBB0 /* AstronautList.swift in Sources */,
 				9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */,
-				9E991ED929F08EC4004ED28A /* FacebookLoginManager.swift in Sources */,
+				9E991ED929F08EC4004ED28A /* AppLoginManager.swift in Sources */,
 				9E991EBA29E9971E004ED28A /* Astronaut.swift in Sources */,
 				9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */,
 				9E991EC229EBA453004ED28A /* LoadingView.swift in Sources */,
@@ -362,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = AstroHunt/AstroHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -370,7 +371,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroHunt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AstroHunt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -394,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = AstroHunt/AstroHunt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -402,7 +407,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AstroHunt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AstroHunt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock the application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
