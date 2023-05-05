@@ -12,9 +12,13 @@ To run AstroHunt, you'll need to have Xcode installed on your Mac. You can downl
 Once you have Xcode installed, follow these steps to run the app:
 
 Clone the AstroHunt repository to your local machine.
+
 Open the MyApp.xcodeproj file in Xcode.
+
 Switch to data-persistence branch.
+
 Select a simulator or a connected iOS device from the scheme menu in the Xcode toolbar.
+
 Click the "Run" button or press Command+R to build and run the app.
 
 
