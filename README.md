@@ -1,9 +1,16 @@
-# AstroHunt
+# AstroHunt - iOS
 
 ## Introduction
-iOS  app with Swift and SwiftUI
+iOS app with Swift and SwiftUI
 
 AstroHunt is a sample iOS app that demonstrates how to use the MVVM architecture pattern. It allows users to browse a list of astronauts, their information, and a detail view of their bio and flights.
+
+features:
+* Offline capability leveraging userdefauls and filemanager.
+* Facebook login
+* Photo sharing to the facebook
+* FaceID login
+* TabView
 
 ## Installation
 
