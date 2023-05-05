@@ -16,9 +16,12 @@ struct CoverView: View {
     
     var body: some View {
                 ZStack{
-            
                     Image("astro").resizable().aspectRatio(contentMode: .fill).ignoresSafeArea(.all)
-                    Text("Welcome to AstroHunt").font(.title).padding(.all).background(.black.opacity(0.5)).foregroundColor(.white).cornerRadius(5).padding(.bottom, 500)
+                    HStack {
+                        Text("AstroHunt").frame(width: 600, height: 70).font(.largeTitle).padding(.all).background(.white
+                        ).foregroundColor(.black)
+                            .cornerRadius(5).padding(.bottom, 400)
+                    }
                     Button(action: {
                                 loginManager.loginUser()
                         }, label: {
@@ -39,9 +42,9 @@ struct CoverView: View {
                                     .padding(.vertical, -10)
                                     .foregroundColor(.white)
                                     .padding()
-                                    .background(Color.gray)
+                                 
                             }
-                        }).padding(.horizontal, 5).shadow(radius: 5).padding(.top, 300)
+                        }).padding(.horizontal, 5).padding(.top, 300)
 
         }.transition(.slide)
             .animation(.easeInOut)
