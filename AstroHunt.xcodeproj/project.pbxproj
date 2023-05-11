@@ -30,6 +30,7 @@
 		9E991EE229F13197004ED28A /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EE129F13197004ED28A /* FacebookShare */; };
 		9ED96B912A0AA50300CDAB6B /* LogoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */; };
 		9ED96B972A0CFA6200CDAB6B /* AstronautList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */; };
+		9ED96B992A0D24C400CDAB6B /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B982A0D24C400CDAB6B /* Flight.swift */; };
 		9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		9E991EDA29F094A8004ED28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutSheetView.swift; sourceTree = "<group>"; };
 		9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautList.swift; sourceTree = "<group>"; };
+		9ED96B982A0D24C400CDAB6B /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInProfileImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				9E991EB929E9971E004ED28A /* Astronaut.swift */,
+				9ED96B982A0D24C400CDAB6B /* Flight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				9E324C1E2A00FB9B009E5536 /* AstronautTabView.swift in Sources */,
 				9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */,
 				9E991ED929F08EC4004ED28A /* AppLoginManager.swift in Sources */,
+				9ED96B992A0D24C400CDAB6B /* Flight.swift in Sources */,
 				9E324C202A01340F009E5536 /* AstronautCardView.swift in Sources */,
 				9E991EBA29E9971E004ED28A /* Astronaut.swift in Sources */,
 				9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */,

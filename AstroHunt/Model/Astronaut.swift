@@ -24,21 +24,18 @@ struct Astronaut: Decodable, Identifiable {
     var agency: Agency
 }
 
-
+//MARK: - Agency
 struct Agency: Decodable {
     var logoUrl: String
 }
 
+//MARK: - Astronautflights
 struct Astronautflights: Decodable{
     var flights: [Flight]
 }
 
-struct Flight: Decodable, Identifiable{
-    var id: String
-    var name: String
-}
 
-
+//MARK: - MockData
 struct MockData {
     static let astronauts = [sampleAstronaut, sampleAstronaut, sampleAstronaut]
     
