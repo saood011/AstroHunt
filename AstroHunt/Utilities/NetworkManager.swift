@@ -74,6 +74,18 @@ class Network: ObservableObject {
         }
     }
     
+    func sortByAge(){
+        return astronauts.sort {
+            $0.age < $1.age
+        }
+    }
+    
+    func sortByName(){
+        return astronauts.sort{
+            $0.name < $1.name
+        }
+    }
+    
     func getAstronauts() {
         print("fetching data")
         self.isLoading = true

@@ -10,29 +10,39 @@ import NukeUI
 
 struct LoggedInProfileImage: View {
     @StateObject var loginManager = AppLoginManager()
+    @State private var showSheet = false
 
     var body: some View {
         HStack{
-            LazyImage(url:  URL(string: loginManager.dpUrl)) { state in
+            Button(action:{
+                showSheet.toggle()
+            }, label: {
+                LazyImage(url:  URL(string: loginManager.dpUrl)) {
+                state in
                 if let image = state.image {
-                    image.resizable().aspectRatio(contentMode: .fill)
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
                 } else if state.error != nil {
                     Color.red // Indicates an error
                 } else {
                     LoadingView()
                 }
-            }
-            .clipShape(Circle()).frame(width: 40, height: 40)
+                }
+            .clipShape(Circle())
+            .frame(width: 35, height: 35)
             .overlay {
-                Circle().stroke(.white, lineWidth: 2)
+                Circle()
+                .stroke(.white, lineWidth: 2)
             }
             .cornerRadius(8)
             .shadow(radius: 2)
-            .frame(width: 40,height: 90).scaledToFit()
-            Button(loginManager.isLoggedIn ?"Logout" :"Not logged in", action: {
-                loginManager.logoutUser()
+            .frame(width: 40,height: 90)
+            .scaledToFit()
             })
-        }
+            .sheet(isPresented: $showSheet) {
+                SheetView().presentationDetents([.fraction(0.3)])
+            }
+            }
     }
 }
 

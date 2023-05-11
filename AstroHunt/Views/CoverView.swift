@@ -42,7 +42,6 @@ struct CoverView: View {
                                     .padding(.vertical, -10)
                                     .foregroundColor(.white)
                                     .padding()
-                                 
                             }
                         }).padding(.horizontal, 5).padding(.top, 300)
 
