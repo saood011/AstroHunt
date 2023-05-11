@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @EnvironmentObject var network: Network
     
-    @StateObject var loginManager = FacebookLoginManager()
+    @StateObject var loginManager = AppLoginManager()
 
     var body: some View {
      
