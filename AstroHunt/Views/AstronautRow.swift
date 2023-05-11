@@ -14,7 +14,7 @@ struct AstronautRow: View {
     
     var body: some View {
         HStack {
-            ProcessedImage(url: URL(string: astronaut.profileImageThumbnail)!)
+            RectangleImage(url: URL(string: astronaut.profileImageThumbnail)!)
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(astronaut.name)

@@ -8,7 +8,7 @@
 import SwiftUI
 import NukeUI
 
-struct ProcessedImage: View {
+struct RectangleImage: View {
     let url: URL
     var body: some View {
         LazyImage(url:  url) { state in
@@ -34,6 +34,6 @@ struct ProcessedImage: View {
 
 struct ProcessedImage_Previews: PreviewProvider {
     static var previews: some View {
-        ProcessedImage(url: URL(string:(MockData.sampleAstronaut.profileImageThumbnail))!)
+        RectangleImage(url: URL(string:(MockData.sampleAstronaut.profileImageThumbnail))!)
     }
 }

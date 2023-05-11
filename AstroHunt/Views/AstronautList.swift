@@ -25,7 +25,7 @@ struct AstronautList: View {
             }
             .navigationTitle("All Astronauts")
             .toolbar{
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                             showingSheet.toggle()
                         }, label: {
@@ -35,6 +35,27 @@ struct AstronautList: View {
                             SheetView().presentationDetents([.height(200)])
                         }
                 }
+                ToolbarItem(placement: .navigationBarLeading){
+                    Menu {
+                        Button {
+                            withAnimation(.default){
+                                network.sortByAge()
+                            }
+                        } label: {
+                            Text("Sort by age")
+                            Image(systemName: "arrow.down.right.circle")
+                        }
+                        Button {
+                            withAnimation(.default){
+                                network.sortByName()
+                            }
+                        } label: {
+                            Text("Sort by name")
+                            Image(systemName: "arrow.up.and.down.circle")
+                        }
+                    } label: {
+                         Image(systemName: "line.3.horizontal.decrease")
+                    }                }
             }
             .listStyle(.inset)
         }

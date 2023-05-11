@@ -21,14 +21,14 @@
 		9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC529ED6252004ED28A /* CircleImage.swift */; };
 		9E991EC829EDC150004ED28A /* AstronautInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EC729EDC150004ED28A /* AstronautInfoText.swift */; };
 		9E991ECE29EF49FF004ED28A /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991ECD29EF49FF004ED28A /* NukeUI */; };
-		9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */; };
+		9E991ED029EF4D90004ED28A /* RectangleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ECF29EF4D90004ED28A /* RectangleImage.swift */; };
 		9E991ED229EF5866004ED28A /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED129EF5866004ED28A /* CoverView.swift */; };
 		9E991ED929F08EC4004ED28A /* AppLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991ED829F08EC4004ED28A /* AppLoginManager.swift */; };
 		9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E991EDA29F094A8004ED28A /* AppDelegate.swift */; };
 		9E991EDE29F13197004ED28A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDD29F13197004ED28A /* FacebookCore */; };
 		9E991EE029F13197004ED28A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EDF29F13197004ED28A /* FacebookLogin */; };
 		9E991EE229F13197004ED28A /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 9E991EE129F13197004ED28A /* FacebookShare */; };
-		9ED96B912A0AA50300CDAB6B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B902A0AA50300CDAB6B /* SheetView.swift */; };
+		9ED96B912A0AA50300CDAB6B /* LogoutSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */; };
 		9ED96B972A0CFA6200CDAB6B /* AstronautList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */; };
 		9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */; };
 /* End PBXBuildFile section */
@@ -48,13 +48,13 @@
 		9E991EC329EBB3D4004ED28A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9E991EC529ED6252004ED28A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		9E991EC729EDC150004ED28A /* AstronautInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautInfoText.swift; sourceTree = "<group>"; };
-		9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessedImage.swift; sourceTree = "<group>"; };
+		9E991ECF29EF4D90004ED28A /* RectangleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImage.swift; sourceTree = "<group>"; };
 		9E991ED129EF5866004ED28A /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		9E991ED329EF5DB1004ED28A /* AstroHunt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AstroHunt.entitlements; sourceTree = "<group>"; };
 		9E991ED729F08533004ED28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9E991ED829F08EC4004ED28A /* AppLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginManager.swift; sourceTree = "<group>"; };
 		9E991EDA29F094A8004ED28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9ED96B902A0AA50300CDAB6B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutSheetView.swift; sourceTree = "<group>"; };
 		9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautList.swift; sourceTree = "<group>"; };
 		9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInProfileImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +137,7 @@
 				9E991EA829E99292004ED28A /* ContentView.swift */,
 				9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */,
 				9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */,
-				9ED96B902A0AA50300CDAB6B /* SheetView.swift */,
+				9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */,
 				9E324C1D2A00FB9B009E5536 /* AstronautTabView.swift */,
 				9E324C1F2A01340F009E5536 /* AstronautCardView.swift */,
 				9E991EB629E99668004ED28A /* AstronautRow.swift */,
@@ -146,7 +146,7 @@
 				9E991ED129EF5866004ED28A /* CoverView.swift */,
 				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
 				9E991EC529ED6252004ED28A /* CircleImage.swift */,
-				9E991ECF29EF4D90004ED28A /* ProcessedImage.swift */,
+				9E991ECF29EF4D90004ED28A /* RectangleImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E991ED029EF4D90004ED28A /* ProcessedImage.swift in Sources */,
+				9E991ED029EF4D90004ED28A /* RectangleImage.swift in Sources */,
 				9ED96B972A0CFA6200CDAB6B /* AstronautList.swift in Sources */,
 				9E991EA929E99292004ED28A /* ContentView.swift in Sources */,
 				9E991EC629ED6252004ED28A /* CircleImage.swift in Sources */,
@@ -241,7 +241,7 @@
 				9E991EC429EBB3D4004ED28A /* DetailView.swift in Sources */,
 				9E991EA729E99292004ED28A /* AstroHuntApp.swift in Sources */,
 				9E991EDB29F094A8004ED28A /* AppDelegate.swift in Sources */,
-				9ED96B912A0AA50300CDAB6B /* SheetView.swift in Sources */,
+				9ED96B912A0AA50300CDAB6B /* LogoutSheetView.swift in Sources */,
 				9E324C1E2A00FB9B009E5536 /* AstronautTabView.swift in Sources */,
 				9EDB97C029F7B2BF001DBBB0 /* LoggedInProfileImage.swift in Sources */,
 				9E991ED929F08EC4004ED28A /* AppLoginManager.swift in Sources */,

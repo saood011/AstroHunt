@@ -19,11 +19,9 @@ struct ContentView: View {
             if !loginManager.isLoggedIn{
                 CoverView()
             }else{
-             AstronautList()
+                AstronautTabView()
             }
         }
-
-      
     }
 }
 
