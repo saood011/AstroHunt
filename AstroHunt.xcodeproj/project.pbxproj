@@ -97,8 +97,8 @@
 			children = (
 				9E991ED729F08533004ED28A /* Info.plist */,
 				9E991ED329EF5DB1004ED28A /* AstroHunt.entitlements */,
-				9E991EBB29E99B8A004ED28A /* Utilities */,
 				9E991EA629E99292004ED28A /* AstroHuntApp.swift */,
+				9E991EBB29E99B8A004ED28A /* Utilities */,
 				9E991EBE29E9A08A004ED28A /* Views */,
 				9E991EB829E99700004ED28A /* Model */,
 				9E991EAA29E99293004ED28A /* Assets.xcassets */,
@@ -137,21 +137,45 @@
 		9E991EBE29E9A08A004ED28A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9ED96B9D2A0D2B4800CDAB6B /* DetailView */,
+				9ED96B9C2A0D2B3E00CDAB6B /* LandingView */,
+				9ED96B9A2A0D2B0700CDAB6B /* CoverView */,
 				9E991EA829E99292004ED28A /* ContentView.swift */,
-				9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */,
-				9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */,
-				9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */,
-				9E324C1D2A00FB9B009E5536 /* AstronautTabView.swift */,
-				9E324C1F2A01340F009E5536 /* AstronautCardView.swift */,
-				9E991EB629E99668004ED28A /* AstronautRow.swift */,
 				9E991EC129EBA453004ED28A /* LoadingView.swift */,
-				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
-				9E991ED129EF5866004ED28A /* CoverView.swift */,
-				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
-				9E991EC529ED6252004ED28A /* CircleImage.swift */,
-				9E991ECF29EF4D90004ED28A /* RectangleImage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9ED96B9A2A0D2B0700CDAB6B /* CoverView */ = {
+			isa = PBXGroup;
+			children = (
+				9E991ED129EF5866004ED28A /* CoverView.swift */,
+			);
+			path = CoverView;
+			sourceTree = "<group>";
+		};
+		9ED96B9C2A0D2B3E00CDAB6B /* LandingView */ = {
+			isa = PBXGroup;
+			children = (
+				9EDB97BF29F7B2BF001DBBB0 /* LoggedInProfileImage.swift */,
+				9ED96B902A0AA50300CDAB6B /* LogoutSheetView.swift */,
+				9E324C1D2A00FB9B009E5536 /* AstronautTabView.swift */,
+				9E991ECF29EF4D90004ED28A /* RectangleImage.swift */,
+				9E991EB629E99668004ED28A /* AstronautRow.swift */,
+				9E324C1F2A01340F009E5536 /* AstronautCardView.swift */,
+				9ED96B962A0CFA6200CDAB6B /* AstronautList.swift */,
+			);
+			path = LandingView;
+			sourceTree = "<group>";
+		};
+		9ED96B9D2A0D2B4800CDAB6B /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				9E991EC329EBB3D4004ED28A /* DetailView.swift */,
+				9E991EC729EDC150004ED28A /* AstronautInfoText.swift */,
+				9E991EC529ED6252004ED28A /* CircleImage.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
