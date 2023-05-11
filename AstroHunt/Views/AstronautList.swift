@@ -12,7 +12,8 @@ struct AstronautList: View {
     @EnvironmentObject var network: Network
     
     @StateObject var loginManager = AppLoginManager()
-    
+    @State private var showingSheet = false
+
     var body: some View {
         NavigationView {
             List(network.astronauts) { astronaut in
@@ -26,6 +27,12 @@ struct AstronautList: View {
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     HStack{
+          
+                
+                    }
+                    Button(action: {
+                        showingSheet.toggle()
+                    }, label: {
                         LazyImage(url:  URL(string: loginManager.dpUrl)) { state in
                             if let image = state.image {
                                 image.resizable().aspectRatio(contentMode: .fill)
@@ -41,19 +48,13 @@ struct AstronautList: View {
                         }
                         .cornerRadius(8)
                         .shadow(radius: 2)
-                        .frame(width: 40,height: 90).scaledToFit()
-                        Button("Logout", action: {
-                            loginManager.logoutUser()
-                        })
-                    }
-                   
+                    })
+                        .sheet(isPresented: $showingSheet) {
+                            SheetView()
+                        }
                 }
             }
             .listStyle(.inset)
-                    .alert(isPresented: $network.error
-                           , content: {
-                        Alert(title: Text("Error Occured"), message: Text("too many requests, try after \(network.retryAfter) seconds"), dismissButton: .default(Text("Got it!")))
-                    })
                 }
         .onAppear {
             network.downloadApiRespnose()
@@ -63,6 +64,6 @@ struct AstronautList: View {
 
 struct AstronautList_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautList()
+        AstronautList().environmentObject(Network())
     }
 }
