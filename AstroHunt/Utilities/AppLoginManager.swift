@@ -23,6 +23,7 @@ class AppLoginManager: ObservableObject, SharingDelegate{
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @AppStorage("email") var email = ""
     @AppStorage("dpUrl") var dpUrl = ""
+    @AppStorage("name") var name = ""
     
     var manager = LoginManager()
     
@@ -49,9 +50,11 @@ class AppLoginManager: ObservableObject, SharingDelegate{
                    guard let profileData = res as? [String: Any] else {return}
                    
                     self.email = profileData["email"] as! String
+                    self.name = profileData["name"] as! String
+                    print(profileData)
                     if let pictureData: [String : Any] = profileData["picture"] as? [String : Any]{
                         if let data : [String: Any] = pictureData["data"] as? [String: Any]{
-                            
+                        
                             print(data["url"] as! String)
                             self.dpUrl = data["url"] as! String
                         }

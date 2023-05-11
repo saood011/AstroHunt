@@ -29,15 +29,15 @@ struct LoggedInProfileImage: View {
                 }
                 }
             .clipShape(Circle())
-            .frame(width: 35, height: 35)
+            .frame(width: 40, height: 40)
             .overlay {
                 Circle()
-                .stroke(.white, lineWidth: 2)
+                .stroke(.white, lineWidth: 1)
             }
             .cornerRadius(8)
             .shadow(radius: 2)
-            .frame(width: 40,height: 90)
             .scaledToFit()
+                Text(loginManager.name != "" ? loginManager.name.split(separator: " ")[0] : "User")
             })
             .sheet(isPresented: $showSheet) {
                 SheetView().presentationDetents([.fraction(0.3)])
