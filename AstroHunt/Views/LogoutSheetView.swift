@@ -13,7 +13,7 @@ struct SheetView: View {
 
     var body: some View {
         VStack{
-            Text("Are you sure you want to log out?").font(.title3)
+            Text("Are you sure you want to log out?").font(.title3).foregroundColor(.black)
             Divider().padding(.bottom, 10)
             Button("Yes, Logout"){
                     loginManager.logoutUser()
