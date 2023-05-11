@@ -11,6 +11,7 @@ features:
 * Photo sharing to the facebook
 * FaceID login
 * TabView
+* Sort by age or name
 
 ## Installation
 
@@ -58,12 +59,6 @@ AppLoginManager is looking after login and logout logic of the app using faceboo
 AppDelegate is actually a part of AppLoginManager and supporting facebook operations.
 
 ## Screenshot of the app
-
-![Simulator Screenshot - iPhone 13 Pro - 2023-05-05 at 11 27 39](https://user-images.githubusercontent.com/48763014/236423096-2478571e-149d-4620-940f-42ecdfd1395e.png)
-
-![Simulator Screenshot - iPhone 13 Pro - 2023-05-05 at 11 27 52](https://user-images.githubusercontent.com/48763014/236423189-a6d76333-fa97-4236-94f8-585d846d1c93.png)
-![Simulator Screenshot - iPhone 13 Pro - 2023-05-05 at 11 28 05](https://user-images.githubusercontent.com/48763014/236423199-cdfbdcaf-3750-4585-a7ac-48a306974620.png)
-
-![Simulator Screenshot - iPhone 13 Pro - 2023-05-05 at 11 28 16](https://user-images.githubusercontent.com/48763014/236423213-5b00a688-71f5-44e7-9783-1d39038a9035.png)
+<img src="https://user-images.githubusercontent.com/48763014/236423096-2478571e-149d-4620-940f-42ecdfd1395e.png" width="auto" height="300">       <img src="https://github.com/saood011/AstroHunt/assets/48763014/f0caee3d-f3f7-4138-91ae-0ab67f58f349"  width="auto" height="300">            <img src="https://user-images.githubusercontent.com/48763014/236423199-cdfbdcaf-3750-4585-a7ac-48a306974620.png"  width="auto" height="300">      <img src="https://user-images.githubusercontent.com/48763014/236423213-5b00a688-71f5-44e7-9783-1d39038a9035.png"  width="auto" height="300">      <img src="https://github.com/saood011/AstroHunt/assets/48763014/e9d32622-6f45-4bba-8bc3-f1d8f0d14dda"  width="auto" height="300">
 
 
