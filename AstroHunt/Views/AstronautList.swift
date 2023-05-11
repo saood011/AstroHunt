@@ -50,7 +50,7 @@ struct AstronautList: View {
                         .shadow(radius: 2)
                     })
                         .sheet(isPresented: $showingSheet) {
-                            SheetView()
+                            SheetView().presentationDetents([.height(200)])
                         }
                 }
             }
